@@ -32,4 +32,8 @@ export class TodoService {
     return this.http.delete(url, httpOptions)
   }
 
+  addTodo(todo:Todo):Observable<Todo> {
+    return this.http.post<Todo>(this.todosUrl, todo, httpOptions)
+  }
+
 }
